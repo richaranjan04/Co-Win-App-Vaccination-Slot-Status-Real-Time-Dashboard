@@ -16,4 +16,4 @@ Note : This code does not provide an end-to-end vaccination booking facility but
 
 # Demo
 
-![Farmers Market Finder Demo](demo/demo.gif)
+![Farmers Market Finder Demo](ezgif.com-gif-to-mp4.gif)
