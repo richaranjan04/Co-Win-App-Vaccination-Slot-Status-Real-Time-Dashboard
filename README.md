@@ -4,7 +4,7 @@
 
 The python code helps you minimize the monotonous task of continuously refreshing the CoWin app. All you need to do is update your pincode and the frequency with  which you want the CoWin page to be refreshed eg 5 for 5 sec and so on. 
 
-The code takes you to the CoWin application and shows you the nearest availabe locations and acts as a real time dashboard by automaticall refreshing.
+The code takes you to the CoWin application and shows you the nearest availabe locations and acts as a real time dashboard and helps you monitor available vaccination slots by automaticall refreshing.
 
 You can use the code on your personal systems Windoes / Linux / Mac OS by following the steps below :
 
