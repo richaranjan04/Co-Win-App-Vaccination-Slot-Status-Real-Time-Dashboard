@@ -7,6 +7,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+
+pin = input('Enter your pincode : ')
+refreshing_frequency = input('Enter the CoWin Page refreshing frequency : ')
+rf=int(refreshing_frequency)
+
 # Path of webdriver on personal system
 path = '/Users/richaranjan/Downloads/chromedriver'
 
@@ -17,8 +22,6 @@ time.sleep(5)
 
 pin_area = driver.find_element_by_id('mat-input-0')
 
-pin = input('Enter pincode for finding nearest vaccination centers :')
-print(pin)
 pin_area.send_keys(pin)  # Enter the pincode of your own area
 
 driver.find_element_by_xpath('//button[normalize-space()="Search"]').click()
@@ -28,13 +31,11 @@ driver.execute_script('arguments[0].scrollIntoView(true);', target)
 
 driver.find_element_by_xpath("//label[contains(text(), 'Age 18+')]").click()
 
-# Loop as many times as you want to refresh the page [0-infinity]. For demo perpose i have taken 5.
-i=0
-while (i<5 ):
+while True:
     driver.find_element_by_xpath('//button[normalize-space()="Search"]').click()
     driver.find_element_by_xpath("//label[contains(text(), 'Age 18+')]").click()
-    time.sleep(30) # Refresh page after ever 30 sec. Can be increaded/decreased accordingly.
-    i=i+1
+    time.sleep(rf) # Refresh frequency
+
 
 driver.quit()
 driver.close()
